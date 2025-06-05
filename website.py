@@ -9,8 +9,8 @@ with col1:
     st.image("profile.jpg", width=150)  
 with col2:
     st.title("👋 Hello, I'm Jabbar Jatoi")
-    st.header("Building Intelligent AI Agents to Automate The Future.")
     st.subheader("💻 Python Backend Developer | AI & LLM Enthusiast")
+    st.subheader("Building Intelligent AI Agents to Automate The Future.")
 
 
 st.markdown("### 🧑‍💼 About Me")
