@@ -6,11 +6,10 @@ st.set_page_config(page_title="Jabbar Jatoi Portfolio", layout="wide")
 
 col1, col2 = st.columns([1, 3])
 with col1:
-    st.image("profile.jpg", width=150)  
+    st.image("profile.jpg", width=150)
 with col2:
-    st.title("👋 Hello, I'm Jabbar Jatoi")
-    st.subheader("💻 Python Backend Developer | AI & LLM Enthusiast")
-    st.subheader("Building Intelligent AI Agents to Automate The Future.")
+    st.title("Jabbar Jatoi")
+    st.markdown("#### 🤖 Building intelligent AI agents to automate the future") 
 
 
 st.markdown("### 🧑‍💼 About Me")
