@@ -1,10 +1,10 @@
 import streamlit as st
 import base64
 
-# Set page configuration
+
 st.set_page_config(page_title="Jabbar Jatoi Portfolio", layout="wide")
 
-# Function to set background image
+
 def set_bg_image(image_file):
     with open(image_file, "rb") as img_file:
         encoded = base64.b64encode(img_file.read()).decode()
@@ -36,15 +36,15 @@ def set_bg_image(image_file):
         </style>
     """, unsafe_allow_html=True)
 
-# 👇 Change 'background.jpg' to your actual background image filename
+
 set_bg_image("background.jpg")
 
-# --- Main content below ---
+
 st.markdown('<div class="content-box">', unsafe_allow_html=True)
 
 col1, col2 = st.columns([1, 3])
 with col1:
-    st.image("profile.jpg", width=150)  # Make sure this image also exists
+    st.image("profile.jpg", width=150)  
 with col2:
     st.title("Jabbar Jatoi")
     st.markdown("#### 🤖 Building intelligent AI agents to automate the future")
