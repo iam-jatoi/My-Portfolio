@@ -4,7 +4,7 @@ import base64
 # Set page config
 st.set_page_config(page_title="Jabbar Jatoi Portfolio", layout="wide")
 
-# Background image setup
+# Background image setup with centered banner and white fonts
 def set_bg_image(image_file):
     with open(image_file, "rb") as img_file:
         encoded = base64.b64encode(img_file.read()).decode()
@@ -30,19 +30,28 @@ def set_bg_image(image_file):
         a:hover {{
             text-decoration: underline;
         }}
-        h1, h2, h3, h4, h5, h6 {{
-            color: white;
+        h1, h2, h3, h4, h5, h6, p, li {{
+            color: white !important;
         }}
-        .main-title {{
+        .main-banner {{
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 2rem;
             text-align: center;
-            font-size: 3em;
-            font-weight: bold;
-            color: white;
+            border-radius: 8px;
             margin-top: 1rem;
             margin-bottom: 2rem;
         }}
+        .main-banner h1 {{
+            font-size: 3em;
+            font-weight: bold;
+            color: white;
+            margin: 0;
+        }}
         </style>
-        <div class="main-title">Jabbar Jatoi</div>
+
+        <div class="main-banner">
+            <h1>Jabbar Jatoi</h1>
+        </div>
     """
     st.markdown(css, unsafe_allow_html=True)
 
