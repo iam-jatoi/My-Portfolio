@@ -4,7 +4,7 @@ import base64
 # Set page config
 st.set_page_config(page_title="Jabbar Jatoi Portfolio", layout="wide")
 
-# Background image setup with centered banner and white fonts
+# Background image setup with centered banner and dark fonts
 def set_bg_image(image_file):
     with open(image_file, "rb") as img_file:
         encoded = base64.b64encode(img_file.read()).decode()
@@ -15,36 +15,41 @@ def set_bg_image(image_file):
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            color: white;
+            color: #222; /* Default text color dark */
         }}
         .content-box {{
-            background-color: rgba(0, 0, 0, 0.5);
+            background-color: rgba(255, 255, 255, 0.85);
             padding: 2rem;
             border-radius: 12px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+            box-shadow: 0 0 20px rgba(0,0,0,0.2);
         }}
         a {{
-            color: #66ccff;
+            color: #0077cc;
             text-decoration: none;
+            font-weight: 500;
         }}
         a:hover {{
             text-decoration: underline;
         }}
-        h1, h2, h3, h4, h5, h6, p, li {{
-            color: white !important;
+        h1, h2, h3, h4, h5, h6 {{
+            color: #111 !important;
+        }}
+        p, li {{
+            color: #333 !important;
         }}
         .main-banner {{
-            background-color: rgba(0, 0, 0, 0.7);
+            background-color: rgba(255, 255, 255, 0.9);
             padding: 2rem;
             text-align: center;
-            border-radius: 8px;
+            border-radius: 12px;
             margin-top: 1rem;
             margin-bottom: 2rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }}
         .main-banner h1 {{
             font-size: 3em;
             font-weight: bold;
-            color: white;
+            color: #111;
             margin: 0;
         }}
         </style>
